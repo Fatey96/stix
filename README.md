@@ -11,6 +11,7 @@ research.
 | Folder | What it is |
 | --- | --- |
 | [`stix-generator/`](stix-generator/) | Latest generator: Flask service + web UI that spawns randomized-but-valid STIX 2.1 objects, wires relationships, validates the bundle, scores quality metrics and (optionally) narrates the scenario with an LLM. |
+| [`legacy/`](legacy/) | Archived earlier copies (STIX-Gen-May, SAKURA, the UNCP/LAS Django+Angular knowledge-graph app, and two 2024 Flask prototypes), kept for provenance only. |
 
 `stix-generator/` is the current revision of the STIX-Gen-May → SAKURA line:
 it keeps the 15 SDO builders, restores the missing UI layer, ships an offline
@@ -26,7 +27,7 @@ made the older copies unrunnable on current `stix2` / `langchain`.
 
 ## Security note
 
-The legacy copies of this code committed a live `OPENAI_API_KEY` in
-`StixObjectLang/*.py`, and at least one of those repositories is public.
-It has been stripped from every file here, but the key itself must be
-considered compromised and revoked in the OpenAI dashboard.
+The legacy `SAKURA` copy committed a live `OPENAI_API_KEY` in
+`StixObjectLang/*.py`. It is stripped from every file here and from the
+archived copies, but the key is still in SAKURA's git history — revoke it in
+the OpenAI dashboard and treat anything it authorized as exposed.

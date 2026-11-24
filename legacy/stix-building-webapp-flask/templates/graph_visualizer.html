@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STIX Graph Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/graph_visualizer.css') }}">
+    <!-- Include any additional stylesheets or libraries here -->
+</head>
+<body>
+    <div id="graph-container">
+        <!-- This div will contain the STIX graph -->
+    </div>
+
+    <!-- Include stixview library -->
+    <script src="https://unpkg.com/stixview/dist/stixview.bundle.js" type="text/javascript"></script>
+
+    <!-- Include your custom JavaScript file -->
+    <script src="{{ url_for('static', filename='js/graph_visualizer.js') }}"></script>
+</body>
+</html>
