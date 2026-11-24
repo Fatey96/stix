@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STIX Object Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/select_object.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>STIX Object Generator</h1>
+        <div class="stix-objects-container">
+            <h2>Select STIX Entities</h2>
+            <div class="stix-objects">
+                <button type="button" class="stix-object" data-object="threat-actor">Threat Actor</button>
+                <button type="button" class="stix-object" data-object="intrusion-set">Intrusion Set</button>
+                <button type="button" class="stix-object" data-object="campaign">Campaign</button>
+                <button type="button" class="stix-object" data-object="identity">Identity</button>
+                <button type="button" class="stix-object" data-object="malware">Malware</button>
+                <button type="button" class="stix-object" data-object="tool">Tool</button>
+                <button type="button" class="stix-object" data-object="attack-pattern">Attack Pattern</button>
+                <button type="button" class="stix-object" data-object="indicator">Indicator</button>
+                <button type="button" class="stix-object" data-object="infrastructure">Infrastructure</button>
+                <button type="button" class="stix-object" data-object="vulnerability">Vulnerability</button>
+                <button type="button" class="stix-object" data-object="location">Location</button>
+                <button type="button" class="stix-object" data-object="course-of-action">Course of Action</button>
+                <button type="button" class="stix-object" data-object="malware-analysis">Malware Analysis</button>
+                <button type="button" class="stix-object" data-object="report">Report</button>
+                <button type="button" class="stix-object" data-object="opinion">Opinion</button>
+            </div>
+        </div>
+
+        <div class="selected-entities">
+            <h2>Selected Entities</h2>
+            <form id="selected-entities-form">
+                <div id="selected-list"></div>
+                <div class="action-buttons">
+                    <button type="button" id="generate-graph">Generate Graph</button>
+                    <button type="button" id="copy-json">Copy JSON</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="output-container">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <h3>STIX Bundle</h3>
+                        <div id="json-output"></div>
+                    </div>
+                    <div class="back">
+                        <h3>Story and Metrics</h3>
+                        <div id="metrics-output"></div>
+                        <div id="story-output"></div>
+                    </div>
+                </div>
+            </div>
+            <button id="flip-button">Flip to Story/Metrics</button>
+        </div>
+
+        <div class="visualizer-button-container">
+            <a href="https://oasis-open.github.io/cti-stix-visualization/" target="_blank" class="stix-visualizer-button">Open STIX Visualizer</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© Laboratory of Analytical Sciences and UNC Pembroke</p>
+        <a href="https://ncsu-las.org/">LAS</a> | <a href="https://www.uncp.edu">UNCP</a>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/select_objects.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,666 @@
+{
+    "type": "bundle",
+    "id": "bundle--4b207550-27fc-4154-8f35-f3fad7751158",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--336b7b56-e425-485c-b351-f1288c296101",
+            "created": "2026-11-24T00:37:37.864916Z",
+            "modified": "2026-11-24T00:37:37.864916Z",
+            "name": "Booth-Howard",
+            "description": "Booth-Howard maintains tooling for privilege-escalation operations and has been linked to 2 campaigns attributed by public reporting.",
+            "threat_actor_types": [
+                "competitor"
+            ],
+            "aliases": [
+                "VaultSnare"
+            ],
+            "roles": [
+                "infrastructure-operator"
+            ],
+            "goals": [
+                "Exfiltrate source code"
+            ],
+            "sophistication": "minimal",
+            "resource_level": "organization",
+            "primary_motivation": "unknown",
+            "secondary_motivations": [
+                "personal-satisfaction"
+            ],
+            "personal_motivations": [
+                "personal-gain"
+            ]
+        },
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--ee294e21-0d42-4ba9-9ef3-c167ffe4afa7",
+            "created": "2026-11-24T00:37:37.865915Z",
+            "modified": "2026-11-24T00:37:37.865915Z",
+            "name": "Hollow Drift",
+            "description": "Hollow Drift maintains tooling for lateral-movement operations and has been linked to 6 campaigns attributed by public reporting.",
+            "threat_actor_types": [
+                "competitor",
+                "sensationalist"
+            ],
+            "roles": [
+                "planner"
+            ],
+            "goals": [
+                "Monetize infrastructure"
+            ],
+            "sophistication": "innovator",
+            "resource_level": "club",
+            "primary_motivation": "unknown",
+            "secondary_motivations": [
+                "dominance"
+            ],
+            "personal_motivations": [
+                "unknown"
+            ]
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--3c1c6d16-f2bf-4c07-bff0-447fa098d83e",
+            "created": "2026-11-24T00:37:37.865915Z",
+            "modified": "2026-11-24T00:37:37.865915Z",
+            "name": "Fernando Travis",
+            "description": "Fernando Travis is a individual operating in the utilities sector.",
+            "roles": [
+                "target"
+            ],
+            "identity_class": "individual",
+            "sectors": [
+                "government",
+                "commercial"
+            ],
+            "contact_information": "erika70@example.com / 203-454-0260"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--716d62d6-6e0b-41d5-b8a8-640bf85d605a",
+            "created": "2026-11-24T00:37:37.865915Z",
+            "modified": "2026-11-24T00:37:37.865915Z",
+            "name": "Nelson Ltd",
+            "description": "Nelson Ltd is a group operating in the education sector.",
+            "roles": [
+                "victim"
+            ],
+            "identity_class": "group",
+            "sectors": [
+                "defense"
+            ],
+            "contact_information": "medinajim@example.org / 001-705-911-7125x9743"
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--2de451be-e5bd-4c33-80fa-c57abaaa819d",
+            "created": "2026-11-24T00:37:37.865915Z",
+            "modified": "2026-11-24T00:37:37.865915Z",
+            "name": "SableMoth",
+            "description": "SableMoth is a spyware family used for credential theft.",
+            "malware_types": [
+                "adware",
+                "virus"
+            ],
+            "is_family": true
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--4a04ee98-2c8e-497e-b6b3-2531000bae59",
+            "created": "2026-11-24T00:37:37.865915Z",
+            "modified": "2026-11-24T00:37:37.865915Z",
+            "name": "Nightshade",
+            "description": "Nightshade is a wiper family used for data encryption.",
+            "malware_types": [
+                "ddos",
+                "trojan"
+            ],
+            "is_family": true,
+            "aliases": [
+                "VaultSnare"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--a8dc50d9-c2ff-4705-9dd2-4c5761c3a521",
+            "created": "2026-11-24T00:37:37.867915Z",
+            "modified": "2026-11-24T00:37:37.867915Z",
+            "name": "file indicator 5b03d127",
+            "description": "Observed file associated with exfiltration.",
+            "indicator_types": [
+                "anomalous-activity"
+            ],
+            "pattern": "[file:hashes.'SHA-256' = 'dbc6458b939b80d1c84f27fc3b2e5d7697b1c80d243a7d906943ca43bb6a4b23']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2026-11-24T00:37:37.865915Z",
+            "valid_until": "2026-12-24T00:37:37.866915Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--283a44db-c904-48e2-8025-5364573ca206",
+            "created": "2026-11-24T00:37:37.871422Z",
+            "modified": "2026-11-24T00:37:37.871422Z",
+            "name": "ipv4-addr indicator 594ac4cc",
+            "description": "Observed ipv4-addr associated with C2 traffic.",
+            "indicator_types": [
+                "anomalous-activity"
+            ],
+            "pattern": "[ipv4-addr:value = '174.207.175.215']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2026-11-24T00:37:37.866915Z",
+            "valid_until": "2026-12-24T00:37:37.871422Z"
+        },
+        {
+            "type": "tool",
+            "spec_version": "2.1",
+            "id": "tool--8353857e-1962-40f0-ab33-2227b16a5a86",
+            "created": "2026-11-24T00:37:37.873423Z",
+            "modified": "2026-11-24T00:37:37.873423Z",
+            "name": "SharpKit",
+            "description": "SharpKit is a exploitation utility observed in intrusions.",
+            "tool_types": [
+                "exploitation"
+            ],
+            "aliases": [
+                "sharpkit"
+            ],
+            "tool_version": "3.4"
+        },
+        {
+            "type": "tool",
+            "spec_version": "2.1",
+            "id": "tool--c4a20503-d6da-46b8-b663-ceddd8390261",
+            "created": "2026-11-24T00:37:37.874423Z",
+            "modified": "2026-11-24T00:37:37.874423Z",
+            "name": "GhostCat",
+            "description": "GhostCat is a credential exploitation utility observed in intrusions.",
+            "tool_types": [
+                "reconnaissance"
+            ],
+            "aliases": [
+                "ghostcat"
+            ],
+            "tool_version": "2.2"
+        },
+        {
+            "type": "intrusion-set",
+            "spec_version": "2.1",
+            "id": "intrusion-set--72224a65-7d19-4bfa-bcc7-cd5a96c3dd87",
+            "created": "2026-11-24T00:37:37.874423Z",
+            "modified": "2026-11-24T00:37:37.874423Z",
+            "name": "Hollow Rook",
+            "description": "Hollow Rook clusters tooling and infrastructure used across multiple intrusions.",
+            "aliases": [
+                "IronWeed"
+            ],
+            "first_seen": "2026-05-28T00:37:37.874423Z",
+            "last_seen": "2026-11-24T00:37:37.874423Z"
+        },
+        {
+            "type": "intrusion-set",
+            "spec_version": "2.1",
+            "id": "intrusion-set--c3814ba5-e2f6-4407-8ffd-c332384cbf66",
+            "created": "2026-11-24T00:37:37.874423Z",
+            "modified": "2026-11-24T00:37:37.874423Z",
+            "name": "Meyers-Wade",
+            "description": "Meyers-Wade clusters tooling and infrastructure used across multiple intrusions.",
+            "first_seen": "2026-05-28T00:37:37.874423Z",
+            "last_seen": "2026-11-24T00:37:37.874423Z"
+        },
+        {
+            "type": "course-of-action",
+            "spec_version": "2.1",
+            "id": "course-of-action--425b2f1a-df21-4ae4-ac6f-17f65c4a6bd1",
+            "created": "2026-11-24T00:37:37.874423Z",
+            "modified": "2026-11-24T00:37:37.874423Z",
+            "name": "Mitigate Execution Techniques",
+            "description": "Controls that reduce the likelihood or impact of execution activity."
+        },
+        {
+            "type": "course-of-action",
+            "spec_version": "2.1",
+            "id": "course-of-action--c5b274cb-97f7-4bab-a687-ae2a5d5973b2",
+            "created": "2026-11-24T00:37:37.874423Z",
+            "modified": "2026-11-24T00:37:37.874423Z",
+            "name": "Mitigate Exfiltration Techniques",
+            "description": "Controls that reduce the likelihood or impact of exfiltration activity."
+        },
+        {
+            "type": "infrastructure",
+            "spec_version": "2.1",
+            "id": "infrastructure--e211ac59-a427-4513-9efd-98db8026dc20",
+            "created": "2026-11-24T00:37:37.873423Z",
+            "modified": "2026-11-24T00:37:37.873423Z",
+            "name": "Load Balancing node cda978",
+            "infrastructure_types": [
+                "load-balancing"
+            ],
+            "aliases": [
+                "rodriguez.com"
+            ],
+            "first_seen": "2026-09-25T00:37:37.873423Z",
+            "last_seen": "2026-11-24T00:37:37.873423Z"
+        },
+        {
+            "type": "infrastructure",
+            "spec_version": "2.1",
+            "id": "infrastructure--41e97d54-4b33-4e38-b6e2-8054466db4c5",
+            "created": "2026-11-24T00:37:37.873423Z",
+            "modified": "2026-11-24T00:37:37.873423Z",
+            "name": "Amplification node f0c25b",
+            "infrastructure_types": [
+                "amplification"
+            ],
+            "aliases": [
+                "ramirez-gonzalez.com"
+            ],
+            "first_seen": "2026-09-25T00:37:37.873423Z",
+            "last_seen": "2026-11-24T00:37:37.873423Z"
+        },
+        {
+            "type": "campaign",
+            "spec_version": "2.1",
+            "id": "campaign--de38090f-7601-4c29-8c81-40c821e560d3",
+            "created": "2026-11-24T00:37:37.874423Z",
+            "modified": "2026-11-24T00:37:37.874423Z",
+            "name": "Operation Cobalt Harvest",
+            "description": "Operation Cobalt Harvest targets construction organizations for espionage.",
+            "first_seen": "2026-08-26T00:37:37.874423Z",
+            "last_seen": "2026-11-24T00:37:37.874423Z",
+            "objective": "Financial extortion"
+        },
+        {
+            "type": "campaign",
+            "spec_version": "2.1",
+            "id": "campaign--829a89cb-65bd-4c66-a3f7-93a35afacdfa",
+            "created": "2026-11-24T00:37:37.874423Z",
+            "modified": "2026-11-24T00:37:37.874423Z",
+            "name": "Operation Silent Crown",
+            "description": "Operation Silent Crown targets communications organizations for extortion.",
+            "aliases": [
+                "Nightshade"
+            ],
+            "first_seen": "2026-08-26T00:37:37.874423Z",
+            "last_seen": "2026-11-24T00:37:37.874423Z",
+            "objective": "Credential harvesting"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--1a2b21bb-9ce5-4797-9236-60480aea3ea4",
+            "created": "2026-11-24T00:37:37.874423Z",
+            "modified": "2026-11-24T00:37:37.874423Z",
+            "name": "Data Encrypted for Impact",
+            "description": "Adversaries may use data encrypted for impact to achieve their objectives."
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--ef84789e-74fd-4e11-8a83-58233f170072",
+            "created": "2026-11-24T00:37:37.874423Z",
+            "modified": "2026-11-24T00:37:37.874423Z",
+            "name": "OS Credential Dumping",
+            "description": "Adversaries may use os credential dumping to achieve their objectives."
+        },
+        {
+            "type": "location",
+            "spec_version": "2.1",
+            "id": "location--63c96149-b9e8-4323-afce-a776d0f63d28",
+            "created": "2026-11-24T00:37:37.875422Z",
+            "modified": "2026-11-24T00:37:37.875422Z",
+            "name": "Saudi Arabia",
+            "description": "Location referencing Saudi Arabia.",
+            "latitude": 57.1877,
+            "longitude": 61.8045,
+            "precision": 0.72,
+            "region": "europe",
+            "country": "SA",
+            "city": "Nicholasberg"
+        },
+        {
+            "type": "location",
+            "spec_version": "2.1",
+            "id": "location--5c2ffdcd-08e4-4091-a6fc-66403f3aa12a",
+            "created": "2026-11-24T00:37:37.875422Z",
+            "modified": "2026-11-24T00:37:37.875422Z",
+            "name": "Honduras",
+            "description": "Location referencing Honduras.",
+            "latitude": -47.4339,
+            "longitude": 122.408,
+            "precision": 0.65,
+            "region": "middle-east",
+            "country": "HO",
+            "city": "Shepardville"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--74ef2a80-dc4a-4967-bdaf-200d21f6c7ff",
+            "created": "2026-11-24T00:37:37.875422Z",
+            "modified": "2026-11-24T00:37:37.875422Z",
+            "product": "Static analysis run 2eab29",
+            "submitted": "2026-11-24T00:37:37.875422Z",
+            "result": "benign"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--3588c390-85ee-4894-8fcd-7d29f93e0fb0",
+            "created": "2026-11-24T00:37:37.875422Z",
+            "modified": "2026-11-24T00:37:37.875422Z",
+            "product": "Hybrid analysis run 081b4e",
+            "submitted": "2026-11-24T00:37:37.875422Z",
+            "result": "malicious"
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--0f604838-392a-49c5-a43b-d4cb799182bc",
+            "created": "2026-11-24T00:37:37.875422Z",
+            "modified": "2026-11-24T00:37:37.875422Z",
+            "name": "CVE-2024-34655",
+            "description": "CVE-2024-34655 allows denial of service in affected products."
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--970f6872-9aba-4fc2-a663-a52a61699dd2",
+            "created": "2026-11-24T00:37:37.875422Z",
+            "modified": "2026-11-24T00:37:37.875422Z",
+            "name": "CVE-2025-7195",
+            "description": "CVE-2025-7195 allows information disclosure in affected products."
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--3b17db5c-8478-4257-bec1-6378d996a685",
+            "created": "2026-11-24T00:37:37.875422Z",
+            "modified": "2026-11-24T00:37:37.875422Z",
+            "name": "Threat report 2026-11-24 #a36e",
+            "description": "Reporting on ransomware activity.",
+            "report_types": [
+                "malware",
+                "threat-actor"
+            ],
+            "published": "2026-11-24T00:37:37.875422Z",
+            "object_refs": [
+                "threat-actor--336b7b56-e425-485c-b351-f1288c296101",
+                "threat-actor--ee294e21-0d42-4ba9-9ef3-c167ffe4afa7",
+                "identity--3c1c6d16-f2bf-4c07-bff0-447fa098d83e"
+            ]
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--12bfd064-5b81-4534-a3d3-2f3abe79794f",
+            "created": "2026-11-24T00:37:37.875422Z",
+            "modified": "2026-11-24T00:37:37.875422Z",
+            "name": "Threat report 2026-11-24 #50a5",
+            "description": "Reporting on supply chain activity.",
+            "report_types": [
+                "campaign",
+                "tool"
+            ],
+            "published": "2026-11-24T00:37:37.875422Z",
+            "object_refs": [
+                "threat-actor--336b7b56-e425-485c-b351-f1288c296101",
+                "threat-actor--ee294e21-0d42-4ba9-9ef3-c167ffe4afa7",
+                "identity--3c1c6d16-f2bf-4c07-bff0-447fa098d83e",
+                "identity--716d62d6-6e0b-41d5-b8a8-640bf85d605a",
+                "malware--2de451be-e5bd-4c33-80fa-c57abaaa819d"
+            ]
+        },
+        {
+            "type": "opinion",
+            "spec_version": "2.1",
+            "id": "opinion--7e4b0f4c-c6ba-4f94-b9be-c5dc23993788",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "explanation": "Assessment based on 8 corroborating observations.",
+            "authors": [
+                "analyst-6a0960"
+            ],
+            "opinion": "strongly-disagree",
+            "object_refs": [
+                "threat-actor--336b7b56-e425-485c-b351-f1288c296101",
+                "threat-actor--ee294e21-0d42-4ba9-9ef3-c167ffe4afa7"
+            ]
+        },
+        {
+            "type": "opinion",
+            "spec_version": "2.1",
+            "id": "opinion--68e23855-65ad-4e0a-ae29-1fb5a9215903",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "explanation": "Assessment based on 4 corroborating observations.",
+            "authors": [
+                "analyst-364fc1"
+            ],
+            "opinion": "agree",
+            "object_refs": [
+                "threat-actor--336b7b56-e425-485c-b351-f1288c296101",
+                "threat-actor--ee294e21-0d42-4ba9-9ef3-c167ffe4afa7"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--561440f9-4750-4484-a922-66156abc796a",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--ee294e21-0d42-4ba9-9ef3-c167ffe4afa7",
+            "target_ref": "malware--2de451be-e5bd-4c33-80fa-c57abaaa819d"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--83dca3b2-aff7-44f4-a4b8-b132ff0f2445",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "relationship_type": "targets",
+            "source_ref": "identity--716d62d6-6e0b-41d5-b8a8-640bf85d605a",
+            "target_ref": "campaign--de38090f-7601-4c29-8c81-40c821e560d3"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3e1a739e-20c3-4861-998f-497cad95012c",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "relationship_type": "originates-from",
+            "source_ref": "malware--4a04ee98-2c8e-497e-b6b3-2531000bae59",
+            "target_ref": "campaign--829a89cb-65bd-4c66-a3f7-93a35afacdfa"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--12ac4cf6-cd80-4cde-83fc-eb52f7bc7bda",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--a8dc50d9-c2ff-4705-9dd2-4c5761c3a521",
+            "target_ref": "malware--4a04ee98-2c8e-497e-b6b3-2531000bae59"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f5bf00f6-fee2-4158-8680-b6df91bea5db",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--283a44db-c904-48e2-8025-5364573ca206",
+            "target_ref": "intrusion-set--c3814ba5-e2f6-4407-8ffd-c332384cbf66"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5e775e90-7fb8-47d8-be90-19c5e9893697",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--283a44db-c904-48e2-8025-5364573ca206",
+            "target_ref": "campaign--de38090f-7601-4c29-8c81-40c821e560d3"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e44105ed-00a4-4331-98bd-2073e36c1c83",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "relationship_type": "uses",
+            "source_ref": "tool--c4a20503-d6da-46b8-b663-ceddd8390261",
+            "target_ref": "malware--2de451be-e5bd-4c33-80fa-c57abaaa819d"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--53a02e56-bfed-4a4b-869b-e0d6a327a942",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "relationship_type": "hosts",
+            "source_ref": "infrastructure--41e97d54-4b33-4e38-b6e2-8054466db4c5",
+            "target_ref": "tool--8353857e-1962-40f0-ab33-2227b16a5a86"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c9333975-4fad-4bfc-aed1-886e84146b38",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "relationship_type": "uses",
+            "source_ref": "campaign--de38090f-7601-4c29-8c81-40c821e560d3",
+            "target_ref": "malware--4a04ee98-2c8e-497e-b6b3-2531000bae59"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--bb1910ec-a90c-4362-a422-3dfbb20ea5ca",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "relationship_type": "targets",
+            "source_ref": "campaign--de38090f-7601-4c29-8c81-40c821e560d3",
+            "target_ref": "identity--716d62d6-6e0b-41d5-b8a8-640bf85d605a"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--37075c1c-281d-4fbd-8afc-15401a542ed6",
+            "created": "2026-11-24T00:37:37.876422Z",
+            "modified": "2026-11-24T00:37:37.876422Z",
+            "relationship_type": "targets",
+            "source_ref": "location--63c96149-b9e8-4323-afce-a776d0f63d28",
+            "target_ref": "campaign--de38090f-7601-4c29-8c81-40c821e560d3"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--831f8d3b-4b66-4e30-8a02-b9b1f74c2f72",
+            "created": "2026-11-24T00:37:37.877925Z",
+            "modified": "2026-11-24T00:37:37.877925Z",
+            "relationship_type": "dynamic-analysis-of",
+            "source_ref": "malware-analysis--74ef2a80-dc4a-4967-bdaf-200d21f6c7ff",
+            "target_ref": "malware--4a04ee98-2c8e-497e-b6b3-2531000bae59"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5dc2c495-bea6-4153-84ce-3bf88da25ffe",
+            "created": "2026-11-24T00:37:37.877925Z",
+            "modified": "2026-11-24T00:37:37.877925Z",
+            "relationship_type": "dynamic-analysis-of",
+            "source_ref": "malware-analysis--3588c390-85ee-4894-8fcd-7d29f93e0fb0",
+            "target_ref": "malware--4a04ee98-2c8e-497e-b6b3-2531000bae59"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--78ce282e-1b4b-4b33-ac52-009ac2f39d71",
+            "created": "2026-11-24T00:37:37.877925Z",
+            "modified": "2026-11-24T00:37:37.877925Z",
+            "relationship_type": "targets",
+            "source_ref": "vulnerability--0f604838-392a-49c5-a43b-d4cb799182bc",
+            "target_ref": "intrusion-set--72224a65-7d19-4bfa-bcc7-cd5a96c3dd87"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a515c9ec-10ec-447e-bc19-79ea115cb73b",
+            "created": "2026-11-24T00:37:37.877925Z",
+            "modified": "2026-11-24T00:37:37.877925Z",
+            "relationship_type": "targets",
+            "source_ref": "vulnerability--970f6872-9aba-4fc2-a663-a52a61699dd2",
+            "target_ref": "intrusion-set--72224a65-7d19-4bfa-bcc7-cd5a96c3dd87"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--bade001b-55e0-41f9-b1e1-6e40768e14c6",
+            "created": "2026-11-24T00:37:37.877925Z",
+            "modified": "2026-11-24T00:37:37.877925Z",
+            "relationship_type": "related-to",
+            "source_ref": "opinion--7e4b0f4c-c6ba-4f94-b9be-c5dc23993788",
+            "target_ref": "infrastructure--e211ac59-a427-4513-9efd-98db8026dc20"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--28afe0f0-2ec6-4016-aa5e-b27070993e2e",
+            "created": "2026-11-24T00:37:37.877925Z",
+            "modified": "2026-11-24T00:37:37.877925Z",
+            "relationship_type": "related-to",
+            "source_ref": "opinion--7e4b0f4c-c6ba-4f94-b9be-c5dc23993788",
+            "target_ref": "identity--716d62d6-6e0b-41d5-b8a8-640bf85d605a"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4264c8b8-39cd-4b49-bbbd-a817327c6386",
+            "created": "2026-11-24T00:37:37.877925Z",
+            "modified": "2026-11-24T00:37:37.877925Z",
+            "relationship_type": "related-to",
+            "source_ref": "opinion--7e4b0f4c-c6ba-4f94-b9be-c5dc23993788",
+            "target_ref": "malware--2de451be-e5bd-4c33-80fa-c57abaaa819d"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a1de4eca-f066-42ea-b2d4-857eec194bb2",
+            "created": "2026-11-24T00:37:37.877925Z",
+            "modified": "2026-11-24T00:37:37.877925Z",
+            "relationship_type": "related-to",
+            "source_ref": "opinion--68e23855-65ad-4e0a-ae29-1fb5a9215903",
+            "target_ref": "infrastructure--41e97d54-4b33-4e38-b6e2-8054466db4c5"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--472f121b-5aff-49f6-924d-da0b5128b8c5",
+            "created": "2026-11-24T00:37:37.877925Z",
+            "modified": "2026-11-24T00:37:37.877925Z",
+            "relationship_type": "related-to",
+            "source_ref": "opinion--68e23855-65ad-4e0a-ae29-1fb5a9215903",
+            "target_ref": "identity--716d62d6-6e0b-41d5-b8a8-640bf85d605a"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--75e14272-5c1c-4402-a901-5a7ec2ab44cb",
+            "created": "2026-11-24T00:37:37.877925Z",
+            "modified": "2026-11-24T00:37:37.877925Z",
+            "relationship_type": "related-to",
+            "source_ref": "opinion--68e23855-65ad-4e0a-ae29-1fb5a9215903",
+            "target_ref": "malware--4a04ee98-2c8e-497e-b6b3-2531000bae59"
+        }
+    ]
+}
